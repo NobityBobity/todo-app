@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Local Storage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Tasks</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    placeholder="Add a new task..." 
+                    class="todo-input"
+                >
+                <button id="addBtn" class="add-btn">
+                    <span>+</span> Add Task
+                </button>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span class="stat">Total: <strong id="totalCount">0</strong></span>
+            <span class="stat">Active: <strong id="activeCount">0</strong></span>
+            <span class="stat">Completed: <strong id="completedCount">0</strong></span>
+        </div>
+
+        <div class="todos-section">
+            <ul id="todoList" class="todo-list">
+                <!-- Todos will be added here -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <p>✨ No tasks yet. Add one to get started!</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+            <button id="clearAll" class="clear-btn danger">Clear All</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
